@@ -1,0 +1,15 @@
+.book-id {
+  font-size: 0.75rem;
+  font-family: 'Arial Narrow';
+  font-weight: lighter;
+  font-style: italic;
+}
+
+.book-title {
+  font-size: 1.25rem;
+}
+
+
+.body {
+  background-color: #fafafa;
+}

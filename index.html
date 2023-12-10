@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bookshelf</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="bookshelf.png" type="image/x-icon" />
+
+    <meta name="author" content="bananalemon" />
+    <meta
+      name="description"
+      content="Bookshelf Application for Dicoding Submission"
+    />
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">Bookshelf Application</h1>
+        <p class="subtitle">
+          Website untuk menyimpan data buku dengan menggunakan local storage
+        </p>
+
+        <hr />
+
+        <div class="columns">
+          <div class="column is-8">
+            <!-- Not Completed Section -->
+            <div class="mb-5">
+              <h1 class="subtitle">Not Completed</h1>
+              <div id="notCompletedSection">
+                <!-- Dynamic Content -->
+              </div>
+            </div>
+
+            <!-- Completed Section -->
+            <div>
+              <h1 class="subtitle">Completed</h1>
+              <div id="completedSection">
+                <!-- Dynamic Content -->
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-4">
+            <!-- Book Form -->
+            <div class="field box">
+              <label class="label">Search Book</label>
+              <div class="control">
+                <input
+                  class="input"
+                  type="text"
+                  placeholder="Enter search"
+                  id="searchInput"
+                  oninput="searchBooks()"
+                />
+              </div>
+            </div>
+            <div class="box" style="padding: 2rem">
+              <h1 class="title">Book Form</h1>
+              <form id="bookForm" action="#" method="post">
+                <input type="hidden" id="editingBookId" />
+
+                <!-- Title Input -->
+                <div class="field">
+                  <label class="label">Title</label>
+                  <div class="control">
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Enter the title"
+                      id="titleInput"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Author Input -->
+                <div class="field">
+                  <label class="label">Author</label>
+                  <div class="control">
+                    <input
+                      class="input"
+                      type="text"
+                      placeholder="Enter the author"
+                      id="authorInput"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Year Input -->
+                <div class="field">
+                  <label class="label">Year</label>
+                  <div class="control">
+                    <input
+                      class="input"
+                      type="number"
+                      placeholder="Enter the year"
+                      id="yearInput"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Is Complete Checkbox -->
+                <div class="field mb-5 mt-5">
+                  <div class="control">
+                    <label class="checkbox">
+                      <input type="checkbox" id="isCompleteCheckbox" />
+                      Is Complete
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="field">
+                  <div class="control">
+                    <button
+                      class="button is-primary"
+                      type="button"
+                      onclick="submitForm()"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p style="font-size: 0.8em">
+          &copy; 2023 Bookshelf Application. All rights reserved. | Designed by
+          <a href="http://github.com/Bananalem0n"> bananalemon </a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Link to Js File -->
+    <script src="function.js"></script>
+  </body>
+</html>
