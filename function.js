@@ -2,7 +2,7 @@ function submitForm() {
   // Get form values
   const title = document.getElementById("titleInput").value;
   const author = document.getElementById("authorInput").value;
-  const year = document.getElementById("yearInput").value;
+  const year = parseInt(document.getElementById("yearInput").value);
   const isComplete = document.getElementById("isCompleteCheckbox").checked;
 
   // Create a new book object
